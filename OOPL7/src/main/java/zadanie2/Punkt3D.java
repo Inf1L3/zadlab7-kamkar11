@@ -52,8 +52,8 @@ public class Punkt3D extends Punkt2D {
 
     @Override
     public String toString() {
-        super.toString();
-        return " z = " + z;
+        
+        return super.toString()+" z = " + z;
     }
 
 }
