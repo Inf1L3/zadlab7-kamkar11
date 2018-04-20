@@ -9,30 +9,51 @@ package zadanie2;
  *
  * @author student
  */
-public class Punkt3D extends Punkt2D{
-    
-    private int z;
+public class Punkt3D extends Punkt2D {
 
-    public Punkt3D(int z, int x, int y) {
+    private int z;
+    Punkt3D array3D[];
+
+    public Punkt3D(int x, int y, int z) {
         super(x, y);
         this.z = z;
     }
+
+    public Punkt3D() {
+
+        z = 0;
+        array3D = new Punkt3D[100];
+    }
     
+ 
+    public int getZ() {
+        return z;
+    }
+    /*
     @Override
-     public void losujPunkty()
-    {
+    public int getX() {
+        return super.getX();
+    }
+    @Override
+    public int getY() {
+        return super.getY();
+    }
+    */
+    
+
+    @Override
+    public void losujPunkty() {
+        
         super.losujPunkty();
-        int x = r.nextInt(10 - (-10) + 1) + (-10);
-        int y = r.nextInt(10 - (-10) + 1) + (-10);
-        int z = r.nextInt(10 - (-10) + 1) + (-10);
+        this.z = r.nextInt(21) + (-10);
+
+        
     }
 
     @Override
     public String toString() {
         super.toString();
-        return "Punkt3D{" + "z=" + z + '}';
+        return " z = " + z;
     }
-     
-    
-    
+
 }
